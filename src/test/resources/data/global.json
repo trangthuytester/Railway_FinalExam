@@ -1,0 +1,5 @@
+{
+  "baseUrl": "http://saferailway.somee.com/Page/HomePage.cshtml",
+  "mailUrl": "https://www.guerrillamail.com/inbox",
+  "passwordResetUrl": "http://www.saferailway.somee.com/Account/PasswordReset"
+}

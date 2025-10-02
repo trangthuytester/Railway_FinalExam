@@ -1,0 +1,18 @@
+{
+  "BLANK_OR_INVALID_ERRORMESSAGE": "There was a problem with your login and/or errors exist in your form.",
+  "SEVERAL_TIME_INVALID_ERRORMESSAGE": "You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.",
+  "INACTIVATED_ACCOUNT_ERRORMESSAGE": "Invalid username or password. Please try again.",
+  "CHANGEPASSWORD_SUCCESSFULLYMESSAGE": "Your password has been updated",
+  "REGISTERWITH_INVALIDCONFIRMPASSWORD_ERRORMESSAGE": "There're errors in the form. Please correct the errors and try again.",
+  "REGISTERWITH_BLANKPASSWORD_ERRORMESSAGE": "Invalid password length!",
+  "REGISTERWITH_BLANKPID_ERRORMESSAGE": "Invalid ID length!",
+  "RESETPASSWORDWITH_BLANKRESETPASSWORD_ERRORMESSAGE_1": "The password reset token is incorrect or may be expired",
+  "RESETPASSWORDWITH_BLANKRESETPASSWORD_ERRORMESSAGE_2": "The password reset token is invalid",
+  "RESETPASSWORDWITH_PASSWORDCONFIRMPASSWORDNOTMATCH_ERRORMESSAGE_1": "Could not reset password. Please correct the errors and try again.",
+  "RESETPASSWORDWITH_PASSWORDCONFIRMPASSWORDNOTMATCH_ERRORMESSAGE_2": "The password confirmation did not match the new password.",
+  "INSTRUCTION_MESSAGE": "Instructions to reset your password have been sent to \"thanhletraining03@gmail.com\".",
+  "RESETPASSWORD_MAIL": "Please reset your password",
+  "REGISTER_SUCCESS_MESSAGE": "Thank you for registering your account",
+  "NOTICKETERRORMESSAGE": "Sorry, can't find any results that match your filters. Please change the filters and try again.",
+  "CURRENTTICKETMESSAGE": "You currently book 0 ticket, you can book 10 more."
+}

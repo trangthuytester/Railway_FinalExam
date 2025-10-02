@@ -1,0 +1,26 @@
+{
+  "SAI_GON": {
+    "depart": "Sài Gòn",
+    "arrives": ["Phan Thiết", "Nha Trang", "Đà Nẵng", "Huế", "Quảng Ngãi"]
+  },
+  "PHAN_THIET": {
+    "depart": "Phan Thiết",
+    "arrives": ["Sài Gòn", "Nha Trang", "Đà Nẵng"]
+  },
+  "NHA_TRANG": {
+    "depart": "Nha Trang",
+    "arrives": ["Sài Gòn", "Phan Thiết", "Đà Nẵng", "Huế"]
+  },
+  "DA_NANG": {
+    "depart": "Đà Nẵng",
+    "arrives": ["Sài Gòn", "Nha Trang", "Huế", "Quảng Ngãi"]
+  },
+  "HUE": {
+    "depart": "Huế",
+    "arrives": ["Sài Gòn", "Nha Trang", "Đà Nẵng", "Quảng Ngãi"]
+  },
+  "QUANG_NGAI": {
+    "depart": "Quảng Ngãi",
+    "arrives": ["Sài Gòn", "Nha Trang", "Đà Nẵng", "Huế"]
+  }
+}
