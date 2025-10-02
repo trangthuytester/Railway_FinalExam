@@ -1,7 +1,4 @@
 package testcases;
-
-import common.constant.enums.SeatType;
-import common.constant.enums.StationRoute;
 import dataobjects.Ticket;
 import dataobjects.User;
 import helpers.TestHelper;
@@ -32,7 +29,7 @@ public class CancelTicketTest extends TestBase{
                 "Welcome message is not displayed!");
 
         BookTicketPage bookTicketPage = homePage.goToBookTicketPage();
-        List<Ticket> bookedTickets = TestHelper.bookMultipleTickets(6, bookTicketPage);
+        List<Ticket> bookedTickets = TestHelper.bookMultipleTickets(MULTIPLE_TICKET, bookTicketPage);
 
 
         MyTicketPage myTicketPage = homePage.goToMyTicketPage();

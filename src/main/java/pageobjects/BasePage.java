@@ -22,11 +22,8 @@ public class BasePage {
 
     public enum TabName {
         LOGIN("Login"),
-        REGISTER("Register"),
         MANAGE_TICKET("ManageTicket"),
-        CHANGE_PASSWORD("ChangePassword"),
-        BOOK_TICKET("BookTicket"),
-        TIME_TABLE("TrainTimeListPage");
+        BOOK_TICKET("BookTicket");
 
         private final String value;
 
@@ -49,24 +46,10 @@ public class BasePage {
         return new MyTicketPage();
     }
 
-    public ChangePasswordPage goToChangePasswordPage() {
-        clickTab(TabName.CHANGE_PASSWORD);
-        return new ChangePasswordPage();
-    }
-
     public BookTicketPage goToBookTicketPage() {
         clickTab(TabName.BOOK_TICKET);
         return new BookTicketPage();
     }
 
-    public RegisterPage goToRegisterPage() {
-        clickTab(TabName.REGISTER);
-        return new RegisterPage();
-    }
-
-    public TimetablePage goToTimetablePage() {
-        clickTab(TabName.TIME_TABLE);
-        return new TimetablePage();
-    }
 
 }

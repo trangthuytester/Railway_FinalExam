@@ -4,10 +4,8 @@ import common.constant.enums.SeatType;
 import common.constant.enums.StationRoute;
 import common.utility.DateUtils;
 import dataobjects.Ticket;
-import dataobjects.User;
 import org.testng.asserts.SoftAssert;
 import pageobjects.BookTicketPage;
-import pageobjects.LoginPage;
 import pageobjects.MyTicketPage;
 
 import java.util.ArrayList;
@@ -17,14 +15,8 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import static common.constant.StationConstants.TICKET_AMOUNT;
-import static common.utility.DateUtils.getRandomUniqueDay;
 
 public class TestHelper {
-    public static void loginSeveralTimesWithInvalidPassword(LoginPage loginPage, User user, int times) {
-        for (int i = 0; i < times; i++) {
-            loginPage.loginAccount(user);
-        }
-    }
 
     public static List<Ticket> bookMultipleTickets(
             int numberOfTickets,
@@ -48,9 +40,6 @@ public class TestHelper {
 
             String ticketId = bookTicketPage.getTicketIdFromSuccessUrl();
             ticket.setTicketId(ticketId);
-
-            System.out.println("Booked Ticket #" + (i+1) + " → ID = " + ticketId
-                    + " | Date = " + ticket.getFormattedDepartDate());
 
             bookedTickets.add(ticket);
         }

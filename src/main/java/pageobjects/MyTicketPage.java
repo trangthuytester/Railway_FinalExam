@@ -21,14 +21,12 @@ public class MyTicketPage extends BasePage{
     private By currentTicketMessage = By.xpath(
             "//div[@class='message']//li[normalize-space(.)='" + CURRENTTICKETMESSAGE + "']"
     );
-
     private By byBtnCancelTicket(String ticketId) {
         return By.xpath("//input[@value='Cancel'][@onclick='DeleteTicket(" + ticketId + ");']");
     }
 
     public void cancelTicketById(String ticketId) {
         By cancelButton = byBtnCancelTicket(ticketId);
-
         helper.clickAndAcceptAlert(cancelButton, WAIT_TIME);
         helper.waitForElementToDisappear(cancelButton, WAIT_TIME);
     }
@@ -37,11 +35,6 @@ public class MyTicketPage extends BasePage{
     public boolean isTicketCancelled(String ticketId) {
         return !helper.isElementPresent(byBtnCancelTicket(ticketId));
     }
-
-    public boolean isAtMyTicketPage() {
-        return helper.getCurrentUrl(TabName.MANAGE_TICKET.getValue());
-    }
-
 
     public void filterTicketByDepartDate(String departDate) {
         enterDepartDate(departDate);
