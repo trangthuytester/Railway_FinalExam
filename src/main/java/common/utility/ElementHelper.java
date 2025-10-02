@@ -46,11 +46,6 @@ public class ElementHelper {
         return new Select(element).getFirstSelectedOption().getText().trim();
     }
 
-    public String getText(By locator) {
-        WebElement element = ElementHelper.findElement(locator);
-        return element.getText().trim();
-    }
-
 
     public void selectDropdownByVisibleText(By locator, String visibleText) {
         WebElement dropdownElement = findElement(locator);
@@ -58,27 +53,6 @@ public class ElementHelper {
         select.selectByVisibleText(visibleText);
     }
 
-    public String getTableCellText(int columnIndex) {
-        String tblBookedTicketCell = "//table//tr[@class='OddRow']/td[%d]";
-        By locator = By.xpath(String.format(tblBookedTicketCell, columnIndex));
-        return getText(locator).trim();
-    }
-
-    public WebElement waitForElementVisible(By locator, int timeoutInSeconds) {
-        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(timeoutInSeconds));
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-    }
-
-    public void clearText(By locator) {
-        WebElement element = findElement(locator);
-        element.clear();
-    }
-
-    public WebElement waitAndScrollToElement(By locator, int timeoutInSeconds) {
-        WebElement element = waitForElementVisible(locator, timeoutInSeconds);
-        scrollToElement(element);
-        return element;
-    }
 
     public boolean isElementPresent(By locator) {
         return !getDriver().findElements(locator).isEmpty();

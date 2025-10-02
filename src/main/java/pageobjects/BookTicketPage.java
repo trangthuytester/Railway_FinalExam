@@ -1,6 +1,5 @@
 package pageobjects;
 
-import common.constant.enums.BookedTicketColumn;
 import common.driver.DriverManager;
 import common.utility.DateUtils;
 import common.utility.ElementHelper;
@@ -9,7 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
 
@@ -64,42 +62,6 @@ public class BookTicketPage extends BasePage {
         selectSeatType(ticket);
         selectTicketAmount(ticket);
         clickBookTicketButton();
-    }
-
-    private String getCellTextByColumn(BookedTicketColumn column) {
-        String xpath = String.format(
-                "//table[@class='MyTable WideTable']//tr/td[count(//table[@class='MyTable WideTable']//th[normalize-space(text())='%s']/preceding-sibling::th)+1]",
-                column.getHeaderText()
-        );
-        return helper.getText(By.xpath(xpath));
-    }
-
-    public void assertBookedTicketMatches(Ticket ticket, SoftAssert soft) {
-        soft.assertEquals(
-                getCellTextByColumn(BookedTicketColumn.DEPART),
-                ticket.getDepartStation().getDepart(),
-                "Depart Station mismatch!"
-        );
-        soft.assertEquals(
-                getCellTextByColumn(BookedTicketColumn.ARRIVE),
-                ticket.getArriveStation().getDepart(),
-                "Arrive Station mismatch!"
-        );
-        soft.assertEquals(
-                getCellTextByColumn(BookedTicketColumn.SEAT_TYPE),
-                ticket.getSeatType().getDisplayName(),
-                "Seat Type mismatch!"
-        );
-        soft.assertEquals(
-                getCellTextByColumn(BookedTicketColumn.DEPART_DATE),
-                ticket.getFormattedDepartDate(),
-                "Depart Date mismatch!"
-        );
-        soft.assertEquals(
-                getCellTextByColumn(BookedTicketColumn.AMOUNT),
-                String.valueOf(ticket.getTicketAmount()),
-                "Amount mismatch!"
-        );
     }
 
     public String getTicketIdFromSuccessUrl() {
